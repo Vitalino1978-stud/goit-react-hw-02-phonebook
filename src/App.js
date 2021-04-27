@@ -26,7 +26,7 @@ class App extends Component {
   }
   
   addContact = ({ name, number }) => {
-    if (this.state.contacts.filter(contact => contact.name === name)) {
+    if (this.state.contacts.some(contact => contact.name === name)) {
       alert(`${name} is already in contacts.`);
       return;
     }
